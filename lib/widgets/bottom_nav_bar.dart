@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../screens/main_bodies/local_news_screen.dart';
+
 class BottomNavBar extends StatefulWidget {
   int _index;
   Function _updatedIndex;
@@ -26,16 +28,16 @@ class _BottomNavBarState extends State<BottomNavBar> {
       selectedItemColor: Colors.green,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          title: Text('Home'),
-        ),
-        BottomNavigationBarItem(
           icon: Icon(Icons.trending_up),
           title: Text('Trending'),
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.settings),
-          title: Text('Settings'),
+          icon: Icon(Icons.not_listed_location),
+          title: Text('Local'),
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.scatter_plot),
+          title: Text('Covid-Data'),
         ),
       ],
     );

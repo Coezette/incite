@@ -25,8 +25,8 @@ class _CategoryNewsViewState extends State<CategoryNewsView> {
   }
 
   void getCategoryNews() async {
-    await CategoryNews.getNews(widget.category);
-    articles = CategoryNews.articles;
+    await TrendingCategoryNews.getNews(widget.category);
+    articles = TrendingCategoryNews.articles;
     setState(() {
       _isLoading = false;
     });
