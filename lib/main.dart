@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:provider/provider.dart';
+
+import 'screens/main_bodies/local_news_screen.dart';
 import './screens/home.dart';
 
 void main() {
@@ -16,7 +19,11 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (ctx) => HomePage(),
+        LocalNewsScreen.routeName: (ctx) => LocalNewsScreen(),
+      },
     );
   }
 }

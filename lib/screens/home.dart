@@ -5,6 +5,7 @@ import '../widgets/app_bar_small.dart';
 import '../widgets/app_bar_big.dart';
 import '../widgets/bottom_nav_bar.dart';
 
+//this is the main landing page (Trending)
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();

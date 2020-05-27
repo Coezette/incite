@@ -12,7 +12,7 @@ class ArticlesList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
-      physics: ScrollPhysics(),
+      physics: ClampingScrollPhysics(),
       scrollDirection: Axis.vertical,
       itemCount: articles.length,
       itemBuilder: (ctx, index) {
