@@ -5,6 +5,7 @@ import 'package:incite/models/category_model.dart';
 import 'package:incite/providers/articles_data.dart';
 import 'package:incite/providers/categories_data.dart';
 import 'package:incite/widgets/articles_list.dart';
+import 'package:incite/widgets/category_local_news_tile.dart';
 import 'package:incite/widgets/category_tile.dart';
 import 'package:incite/providers/locations.dart';
 
@@ -16,7 +17,7 @@ class LocalNewsScreen extends StatefulWidget {
 
   String location;
 
-  LocalNewsScreen({this.location = 'za'});
+  LocalNewsScreen({this.location = 'ae'});
 
   @override
   _LocalNewsScreenState createState() => _LocalNewsScreenState();
@@ -98,8 +99,9 @@ class _LocalNewsScreenState extends State<LocalNewsScreen> {
                     scrollDirection: Axis.horizontal,
                     itemCount: categories.length,
                     itemBuilder: (ctx, index) {
-                      return CategoryTile(
+                      return CategoryLocalTile(
                         categoryName: categories[index].name,
+                        locationName: widget.location,
                       );
                     },
                   ),

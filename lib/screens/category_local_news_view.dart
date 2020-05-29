@@ -5,29 +5,30 @@ import '../models/article_model.dart';
 
 import '../widgets/articles_list.dart';
 
-List<ArticleModel> articles = new List<ArticleModel>();
+List<ArticleModel> _articles = new List<ArticleModel>();
 
-class CategoryNewsView extends StatefulWidget {
+class CategoryLocalNewsView extends StatefulWidget {
   final String category;
+  final String location;
 
-  CategoryNewsView({this.category});
+  CategoryLocalNewsView({this.category, this.location});
 
   @override
-  _CategoryNewsViewState createState() => _CategoryNewsViewState();
+  _CategoryLocalNewsViewState createState() => _CategoryLocalNewsViewState();
 }
 
-class _CategoryNewsViewState extends State<CategoryNewsView> {
+class _CategoryLocalNewsViewState extends State<CategoryLocalNewsView> {
   bool _isLoading = true;
 
   void initState() {
     super.initState();
-    _getCategoryNews(widget.category);
+    _getCategoryLocalNews(widget.location, widget.category);
   }
 
-  void _getCategoryNews(String cat) async {
-    var catNewsObject = TrendingCategoryNews();
-    await catNewsObject.getNews(cat);
-    articles = catNewsObject.articles;
+  void _getCategoryLocalNews(String loc, String cat) async {
+    var categoryLocalNewsObject = LocalNewsByCategory();
+    await categoryLocalNewsObject.getNews(loc, cat);
+    _articles = categoryLocalNewsObject.articles;
     setState(() {
       _isLoading = false;
     });
@@ -54,7 +55,7 @@ class _CategoryNewsViewState extends State<CategoryNewsView> {
                   padding: const EdgeInsets.all(10.0),
                   child: Column(
                     children: <Widget>[
-                      ArticlesList(articles: articles),
+                      ArticlesList(articles: _articles),
                     ],
                   ),
                 ),
