@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:incite/screens/main_bodies/local_news_screen.dart';
 
+import '../screens/main_bodies/covid_data_screen.dart';
+import '../screens/main_bodies/local_news_screen.dart';
 import '../screens/main_bodies/trending_news_main_body.dart';
 
 class Body extends StatefulWidget {
@@ -43,8 +44,8 @@ class _BodyState extends State<Body> {
                           icon: Icon(Icons.settings), label: Text('Settings')),
                     ],
                     selectedIndex: widget._index,
-                    selectedIconTheme: IconThemeData(color: Colors.green),
-                    selectedLabelTextStyle: TextStyle(color: Colors.green),
+                    selectedIconTheme: IconThemeData(color: Colors.blue),
+                    selectedLabelTextStyle: TextStyle(color: Colors.blue),
                     extended: true,
                     minExtendedWidth: 160.0,
                     onDestinationSelected: _onTap,
@@ -65,7 +66,7 @@ class _BodyState extends State<Body> {
         return LocalNewsScreen();
         break;
       case 2:
-        return TrendingNewsMainBody();
+        return CovidDataScreen();
         break;
     }
   }

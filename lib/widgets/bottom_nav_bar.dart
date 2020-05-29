@@ -25,7 +25,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return BottomNavigationBar(
       currentIndex: widget._index,
       onTap: _onTap,
-      selectedItemColor: Colors.green,
+      selectedItemColor: Colors.pink,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.trending_up),

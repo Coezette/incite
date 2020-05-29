@@ -10,8 +10,6 @@ import 'package:incite/widgets/category_tile.dart';
 var categories = new List<CategoryModel>();
 List<ArticleModel> trendingLocalArticles = new List<ArticleModel>();
 
-bool _isLoading = true;
-
 class LocalNewsScreen extends StatefulWidget {
   static const routeName = '/local-news';
 
