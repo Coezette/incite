@@ -36,12 +36,14 @@ class _BodyState extends State<Body> {
                   NavigationRail(
                     destinations: [
                       NavigationRailDestination(
-                          icon: Icon(Icons.home), label: Text('Home')),
-                      NavigationRailDestination(
                           icon: Icon(Icons.trending_up),
                           label: Text('Trending')),
                       NavigationRailDestination(
-                          icon: Icon(Icons.settings), label: Text('Settings')),
+                          icon: Icon(Icons.not_listed_location),
+                          label: Text('Local')),
+                      NavigationRailDestination(
+                          icon: Icon(Icons.scatter_plot),
+                          label: Text('Covid-19 Data')),
                     ],
                     selectedIndex: widget._index,
                     selectedIconTheme: IconThemeData(color: Colors.blue),
