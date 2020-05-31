@@ -35,6 +35,10 @@ lib/generated_plugin_registrant.dart
 #APIKeys
 keys.dart
 
+#Android related
+**/android/key.properties
+key.properties
+
 # Symbolication related
 app.*.symbols
 
