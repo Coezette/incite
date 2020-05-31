@@ -38,6 +38,8 @@ keys.dart
 #Android related
 **/android/key.properties
 key.properties
+android/key.properties
+
 
 # Symbolication related
 app.*.symbols
