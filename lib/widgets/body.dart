@@ -41,9 +41,9 @@ class _BodyState extends State<Body> {
                       NavigationRailDestination(
                           icon: Icon(Icons.not_listed_location),
                           label: Text('Local')),
-                      NavigationRailDestination(
-                          icon: Icon(Icons.scatter_plot),
-                          label: Text('Covid-19 Data')),
+//                      NavigationRailDestination(
+//                          icon: Icon(Icons.scatter_plot),
+//                          label: Text('Covid-19 Data')),
                     ],
                     selectedIndex: widget._index,
                     selectedIconTheme: IconThemeData(color: Colors.blue),
@@ -67,9 +67,9 @@ class _BodyState extends State<Body> {
       case 1:
         return LocalNewsScreen();
         break;
-      case 2:
-        return CovidDataScreen();
-        break;
+//      case 2:
+//        return CovidDataScreen();
+//        break;
     }
   }
 }

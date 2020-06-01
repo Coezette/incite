@@ -35,10 +35,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
           icon: Icon(Icons.not_listed_location),
           title: Text('Local'),
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.scatter_plot),
-          title: Text('Covid-Data'),
-        ),
+//        BottomNavigationBarItem(
+//          icon: Icon(Icons.scatter_plot),
+//          title: Text('Covid-Data'),
+//        ),
       ],
     );
   }
