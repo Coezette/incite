@@ -2,6 +2,10 @@
 
 A global news and data tracking application (Android, iOS, and Progressive Web Application) that allows for getting trending news (according to trending topics on Twitter) relevant to user location as well as up-to-date access to global information from reputable sources.
 
+    ->Link to iOS apps (iPhone and iPad) on the App Store: https://apps.apple.com/us/app/incite-news/id1516091260#?platform=ipad
+
+    ->Link to incite on the web (PWA): https://incite.news
+
 First version of the app to use NewsAPI.org to get news articles. Trending Topics functionality to be implemented in the future.
 
 First version to also feature  Covid-19 cases tracking page providing users with a quick overview of the related data.
